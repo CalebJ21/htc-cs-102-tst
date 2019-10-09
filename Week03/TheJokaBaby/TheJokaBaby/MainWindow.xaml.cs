@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ClassesIntro
+namespace TheJokaBaby
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,18 +25,20 @@ namespace ClassesIntro
             InitializeComponent();
         }
 
-        private void Bark_Button_Click(object sender, RoutedEventArgs e)
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Dog dog = new Dog();
-            dog.Bark();
+            
         }
 
-        private void SayName_Button_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            string dogName = DogName.Text;
+            Moviecs submittedMovie = new Moviecs();
 
-            Dog dog = new Dog("Corgi", 12, dogName);
-           dog.sayName();
+            submittedMovie.Title = textBox.Text;
+            submittedMovie.Genre = genrebox.Text;
+            submittedMovie.ReviewScore= Convert.ToDouble(reviewbox.Text);
+
+
         }
     }
 }

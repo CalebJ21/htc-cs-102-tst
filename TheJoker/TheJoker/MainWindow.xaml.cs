@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ClassesIntro
+namespace TheJoker
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,20 +23,6 @@ namespace ClassesIntro
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Bark_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Dog dog = new Dog();
-            dog.Bark();
-        }
-
-        private void SayName_Button_Click(object sender, RoutedEventArgs e)
-        {
-            string dogName = DogName.Text;
-
-            Dog dog = new Dog("Corgi", 12, dogName);
-           dog.sayName();
         }
     }
 }
