@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace TheJokaBaby
 {
@@ -20,6 +22,7 @@ namespace TheJokaBaby
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,13 +34,25 @@ namespace TheJokaBaby
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
+
+
         {
-            Moviecs submittedMovie = new Moviecs();
+            ObservableCollection<Moviecs> movieList = new ObservableCollection<Moviecs>();
 
-            submittedMovie.Title = textBox.Text;
-            submittedMovie.Genre = genrebox.Text;
-            submittedMovie.ReviewScore= Convert.ToDouble(reviewbox.Text);
+           
 
+            Moviecs submittedMovie = new Moviecs(textBox.Text,genrebox.Text,Convert.ToDouble(reviewbox.Text));
+
+            movieList.Add(submittedMovie);
+           // submittedMovie.Title = textBox.Text;
+            //submittedMovie.Genre = genrebox.Text;
+             //submittedMovie.ReviewScore= Convert.ToDouble(reviewbox.Text);
+
+            submittedMovie.DisplayInfo();
+
+            textBox.Clear();
+            genrebox.Clear();
+            reviewbox.Clear();
 
         }
     }

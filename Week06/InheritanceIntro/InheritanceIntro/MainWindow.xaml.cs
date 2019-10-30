@@ -50,5 +50,11 @@ namespace InheritanceIntro
                 d.SayName();
             }
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            skoop skoop = new skoop(12, "Fredrick");
+            skoop.Quack();
+        }
     }
 }

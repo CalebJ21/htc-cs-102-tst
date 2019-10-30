@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheJokaBaby"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid x:Name="moviething">
+        Title="MainWindow" Height="372.897" Width="680.919">
+    <Grid x:Name="moviething" Margin="26,0,0,22">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.524,0.379" TextChanged="textBox_TextChanged" AutomationProperties.Name="Title"/>
         <Label x:Name="label" Content="Title&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" AutomationProperties.Name="TitleTitle"/>
         <Label x:Name="label_Copy" Content="Genre" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" AutomationProperties.Name="GenreTitle"/>
@@ -15,6 +15,16 @@
         <Label x:Name="label_Copy2" Content="Score" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" AutomationProperties.Name="ScoreTitle"/>
         <TextBox x:Name="reviewbox" HorizontalAlignment="Left" Height="23" Margin="10,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.524,0.379" TextChanged="textBox_TextChanged" AutomationProperties.Name="ScoreBox"/>
         <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Width="75" AutomationProperties.Name="Submityouwont" Click="button_Click"/>
+        <ListView x:Name="movielistview" HorizontalAlignment="Left" Height="203" Margin="224,21,0,0" VerticalAlignment="Top" Width="366">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnCollection Width="150"= Header="Genre" DisplayMemberBinding= "{Binding Title }"
+                
+
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
